@@ -1,23 +1,16 @@
 {
-  "name": "promptopia",
-  "version": "0.1.0",
+  "name": "promptpedia",
+  "version": "1.0.0",
   "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "autoprefixer": "10.4.14",
-    "bcrypt": "^5.1.0",
-    "mongodb": "^5.3.0",
-    "mongoose": "^7.1.0",
-    "next": "13.3.4",
-    "next-auth": "^4.22.1",
-    "postcss": "8.4.23",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "tailwindcss": "3.3.2"
+    "build:api": "npm run build --workspace=@promptpedia/api",
+    "build:web": "npm run build --workspace=@promptpedia/web",
+    "dev:api": "npm run start:dev --workspace=@promptpedia/api",
+    "dev:web": "npm run dev --workspace=@promptpedia/web",
+    "lint:api": "npm run lint --workspace=@promptpedia/api",
+    "lint:web": "npm run lint --workspace=@promptpedia/web"
   }
 }
